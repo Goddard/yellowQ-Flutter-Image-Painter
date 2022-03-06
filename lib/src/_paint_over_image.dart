@@ -332,6 +332,13 @@ class ImagePainterState extends State<ImagePainter> {
   ui.Image? _image;
   bool _inDrag = false;
   final _paintHistory = <PaintInfo>[];
+
+  get paintHistory => _paintHistory;
+
+  // set paintHistory(value) {
+  //   _paintHistory = value;
+  // }
+
   final _points = <Offset?>[];
   late final ValueNotifier<Controller> _controller;
   late final ValueNotifier<bool> _isLoaded;
