@@ -333,11 +333,13 @@ class ImagePainterState extends State<ImagePainter> {
   bool _inDrag = false;
   final _paintHistory = <PaintInfo>[];
 
-  get paintHistory => _paintHistory;
+  List<PaintInfo> get paintHistory {
+     return _paintHistory;
+  }
 
-  // set paintHistory(value) {
-  //   _paintHistory = value;
-  // }
+  void addItem(PaintInfo value) {
+    _paintHistory.add(value);
+  }
 
   final _points = <Offset?>[];
   late final ValueNotifier<Controller> _controller;
